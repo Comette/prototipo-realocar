@@ -1,0 +1,80 @@
+.realocar-home{
+	padding: 0 25px;
+	min-height: 300px;
+
+	&__title{
+		font-size: 24px;
+		text-align: center;
+	}
+
+	&__flow{
+		margin-top: 70px;
+
+		&--ul{
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+		}
+
+		&--li{
+			cursor: pointer;
+		}
+
+		&__title{
+			padding-bottom: 20px;
+			font-size: 18px;
+		}
+
+		&__content{
+			display: flex;
+			border-top: 2px solid #D6DCE0;
+			position: relative;
+			font-size: 14px;
+			height: 1px;
+			min-width: 200px;
+
+			&:before{
+				content: '';
+				width: 20px;
+				height: 20px;
+				background-color: white;
+				border-radius: 20px;
+				border: 1px solid #DDD;
+				position: absolute;
+				top: -12px;
+				left: 47%;
+			}
+
+			&--active{
+				border-top: 2px solid #FBB041;
+				transition: all 200ms ease-in-out;
+
+				&:before{
+					transition: all 200ms ease-in;
+					background-color: #FBB041;
+					border: 1px solid #FBB041;
+				}
+			}
+
+			&--done{
+				border-top: 2px solid #FBB041;
+				transition: all 200ms ease-in-out;
+
+				&:before{
+					transition: all 200ms ease-in;
+					border: 1px solid #FBB041;
+				}
+			}
+		}
+	}
+
+	&__description{
+		margin: 25px 100px;
+		padding: 25px;
+		border: 2px solid #D6DCE0;
+		border-radius: 10px;
+		font-size: 18px;
+	}
+}
