@@ -1,64 +1,129 @@
 
 .realocar-panel{
 	min-height: 150px;
-	background-color: #9ea2ae;
-	padding: 25px;
-
-	$panelWidth: 280px;
+	background-color: #32363F;
+	padding: 0 25px;
 
 	&__board{
-		width: 280px;
+		width: 350px;;
 		display: inline-block;
 
-		&__titulo{
-			padding: 10px;
-			font-size: 18px;
-			font-weight: 600;
-			text-align: center;
-			color: #FBB041;
-			background-color: #32363F;
-			border-top-left-radius: 5px;
-			border-top-right-radius: 5px;
-			box-shadow: inset 0px 0px 10px -2px black;
+		&__ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
 		}
 
-		&__container{
-			box-shadow: inset 0px 0px 10px -2px black;
-			border-bottom-left-radius: 5px;
-			border-bottom-right-radius: 5px;
-			background-color: white;
-			padding: 5px 5px;
+		&__titulo{
+			font-size: 20px;
+			font-weight: 600;
+			padding-top: 50px;
+			padding-bottom: 30px;
+			padding-left: 15px;
+			color: #FBB041;
+			border-left: 2px solid #FBB041;
 		}
+
 	}
 
 	&__box{
-		border-radius: 5px;
-		margin: 5px 5px;
-		background-color: #DDD;
-		padding: 5px 10px;
-		font-size: 14px;
-		width: 240px;
-		min-height: 50px;
-		display: inline-block;
-		cursor: pointer;
-		border: 1px solid #DDD;
+		$this: &;
+		font-size: 16px;
+		color: #D6DCE0;
+		border-left: 2px solid #FBB041;
 
 		&__titulo{
 			font-weight: 600;
-			color: #32363F;
-			padding-bottom: 5px;
+			padding-left: 15px;
+
+			div{
+				background-color: #434756;
+				padding: 10px;
+				border-right: 2px solid #D6DCE0;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				cursor: pointer;
+			}
 		}
 
 		&__desc{
-			font-size: 12px;
+			padding-left: 15px;
+			padding-bottom: 20px;
+			font-size: 14px;
+			position: relative;
+
+			div{
+				cursor: pointer;
+				background-color: #434756;
+				padding: 10px;
+				border-right: 2px solid #D6DCE0;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+
+			&:before{
+				content: '';
+				width: 12px;
+				height: 12px;
+				border-radius: 15px;
+				background-color: #32363F;
+				border: 1px solid #FBB041;
+				position: absolute;
+				top: 0px;
+				left: -7px;
+			}
+		}
+
+		&__bottom{
+			border-left: 2px solid #FBB041;
+			height: 50px;
 		}
 
 		&:hover{
-			border-color: #FBB041;
+			#{$this}{
+				&__titulo{
+					color: #FBB041;
+					transition: all .1s;
+
+					div{
+						border-color: #FBB041;
+						border-width: 3px;
+					}
+				}
+
+				&__desc{
+					div{
+						border-color: #FBB041;
+						border-width: 3px;
+					}
+				}
+			}
+
 		}
 
 		&.selecionada{
-			border-color: #FBB041;
+			#{$this}{
+				&__titulo{
+					color: #FBB041;
+					div{
+						border-color: #FBB041;
+					}
+				}
+
+				&__desc{
+					div{
+						border-color: #FBB041;
+					}
+					&:before{
+						width: 18px;
+						height: 18px;
+						left: -10px;
+						top: -3px;
+						background-color: #FBB041;
+						transition: all .2s;
+					}
+				}
+			}
 		}
 	}
 
@@ -66,68 +131,102 @@
 		margin-left: 25px;
 		display: inline-block;
 		vertical-align: top;
-		width: calc(96% - 280px);
+		width: calc(96% - 350px);
 
 		&__titulo{
+			padding-top: 50px;
+			padding-bottom: 30px;
 			color: #FBB041;
-			font-size: 18px;
+			font-size: 20px;
 			font-weight: 600;
-			text-align: center;
-			background-color: #32363F;
-			padding: 10px;
+			text-align: right;
 			border-top-left-radius: 5px;
 			border-top-right-radius: 5px;
-			box-shadow: inset 0px 0px 10px -2px black;
 		}
 
 		&__vaga{
-			box-shadow: inset 0px 0px 10px -2px black;
-			border-bottom-left-radius: 5px;
-			border-bottom-right-radius: 5px;
-			background-color: white;
+			background-color: #434756;
 			padding: 20px 20px;
-			color: #32363F;
+			color: #D6DCE0;
 			font-size: 14px;
+			border-radius: 5px;
+			border: 2px solid #D6DCE0; 
+			border-top: none;
+			border-bottom: none;
+			font-size: 16px;
 
 			&__titulo{
+				vertical-align: top;
 				display: inline-block;
 				text-align: left;
 				font-weight: 600;
 				padding-bottom: 15px;
 				width: 49%;
-				font-size: 16px;
+				color: #FBB041;
+				font-size: 18px;
 			}
 
 			&__sub-titulo{
+				font-size: 14px;
 				display: inline-block;
 				text-align: right;
 				padding-bottom: 15px;
+				font-weight: 600;
 				width: 49%;
 			}
 		}
 
 		&__candidatar{
 			text-align: center;
+			position: relative;
 
 			div{
-				background-color: #FBB041;
-				margin: 50px 5%;
-				width: 90%;
-				box-shadow: 0px 0px 10px -2px black;
+				cursor: pointer;
+				vertical-align: bottom;
+				color: #D6DCE0;
+				background-color: #32363F;
+				margin: 100px 25% 10px 25%;
+				width: 50%;
 				border-radius: 5px;
 				padding: 10px 0px;
 				font-weight: 600;
-				font-size: 20px;
-				color: #22242b;
+				font-size: 18px;
+				border: 2px solid #FBB041; 
+				border-top: none;
+				border-bottom: none;
+
+				&:hover{
+					color: #FBB041;
+					border-color: #FBB041;
+					transition: all .2s;
+				}
+			}
+
+			&__icon{
+				height: 25px;
+				position: absolute;
+				padding-left: 20px;
+				top: 7px;
+			}
+		}
+
+		&__vazio{
+			content: '';
+			background-color: #434756;
+			padding: 100px 10px;
+			border-radius: 5px;
+			border: 2px solid #D6DCE0;
+			border-top: none;
+			border-bottom: none;
+			text-align: center;
+			font-size: 18px;
+			font-weight: 600;
+			color: #70778f;
+
+			&:hover{
+				color: #a9adbc;
+				transition: all .2s;
 			}
 		}
 	}
 }
-
-// @media (min-width: 1360px){
-// 	.realocar-panel{
-// 		&__board{
-// 			width: 520px;
-// 		}
-// 	}
-// }

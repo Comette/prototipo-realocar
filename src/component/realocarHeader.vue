@@ -1,10 +1,9 @@
 <template>
 	<div class="realocar-header">
 		<div class="base-container">
-			<img class="realocar-header__logo" src="../assets/LOGO-CWI-PADRÃO-VERTICAL-ESCURO.svg" alt="">
+			<img class="realocar-header__logo" src="../assets/LOGO-CWI-PADRÃO-VERTICAL-CLARO.svg" alt="">
 			<div class="realocar-header__title">
-				<p>Realocar</p>
-				<span>Novos desafios dentro da CWI.</span>
+				<p><span>CWI </span>Realocar</p>
 			</div>
 			<div class="realocar-header__sub-title">
 				<p>Este é um novo espaço criado pela CWI para que seus colaboradores possam se candidatar à novas dentro da empresa.</p>

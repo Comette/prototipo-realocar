@@ -1,38 +1,40 @@
 .realocar-header{
-	color: #32363F;
 	height: 150px;
-	background-color: #f2f2f2;
+	background-color: #434756;
 
 	&__logo{
 		height: 100px;
-		padding: 25px;
+		padding: 25px 50px;
 	}
 
 	&__title{
+		color: #D6DCE0;
 		display: inline-block;
 		vertical-align: top;
-		width: 30%;
+		width: 38%;
+		text-align: right;
+
 		p{
-			margin-top: 40px;
+			margin-top: 50px;
 			margin-bottom: 0;
-			font-size: 35px;
+			font-size: 40px;
 		}
 
 		span{
-			font-style: italic;
+			color: #FBB041;
 		}
 	}
 
 	&__sub-title{
-		width: 350px;
+		width: 250px;
 		font-size: 14px;
 		vertical-align: top;
 		float: right;
 
 		p{
-			padding: 30px 30px;
+			padding-top: 25px;
 			text-align: center;
-			color: gray;
+			color: #8d92a5;
 			font-style: italic;
 		}
 	}

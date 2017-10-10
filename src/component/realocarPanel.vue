@@ -3,17 +3,18 @@
 		<div class="base-container">
 
 			<div class="realocar-panel__board">
-				<div class="realocar-panel__board__titulo">Painel de Vagas</div>
-				<div class="realocar-panel__board__container">
-					<div v-for="vaga in vagas" class="realocar-panel__box" @click.stop="selecionarVaga(vaga)" :class="{'selecionada': isSelecionada(vaga)}">
-						<div class="realocar-panel__box__titulo">{{vaga.titulo}}</div>
-						<div class="realocar-panel__box__desc">{{vaga.descricaoCurta}}</div>
-					</div>
-				</div>
+				<ul class="realocar-panel__board__ul">
+					<li class="realocar-panel__board__titulo">VAGAS ABERTAS</li>
+					<li v-for="vaga in vagas" class="realocar-panel__box" @click.stop="selecionarVaga(vaga)" :class="{'selecionada': isSelecionada(vaga)}">
+						<div class="realocar-panel__box__titulo"><div>{{vaga.titulo}}</div></div>
+						<div class="realocar-panel__box__desc"><div>{{vaga.descricaoCurta}}</div></div>
+					</li>
+					<li class="realocar-panel__box__bottom"></li>
+				</ul>
 			</div>
 
 			<div class="realocar-panel__desc">
-				<div class="realocar-panel__desc__titulo">Dados da vaga</div>
+				<div class="realocar-panel__desc__titulo">DADOS DA VAGA</div>
 				<div v-if="!!vagaSelecionada.idVaga">
 					<div class="realocar-panel__desc__vaga">
 						<div>
@@ -21,15 +22,22 @@
 							<div class="realocar-panel__desc__vaga__sub-titulo">{{vagaSelecionada.descricaoCurta}}</div>
 						</div>
 						<div class="realocar-panel__desc__vaga__desc">{{vagaSelecionada.descricaoCompleta}}</div>
+						<div class="realocar-panel__desc__candidatar">
+							<div @click.stop="candidatar()">
+								<span>Candidatar-se</span>
+								<img class="realocar-panel__desc__candidatar__icon" src="../assets/up-arrow-bold.svg" alt="">
+							</div>
+						</div>
 					</div>
-					<div class="realocar-panel__desc__candidatar">
-						<div @click.stop="candidatar()">Canditadar-se</div>
-					</div>
+				</div>
+				<div v-else>
+					<div class="realocar-panel__desc__vazio">Selecione uma vaga</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
+
 <script>
 	import * as values from '../constants/values.js'
 	import {Vaga} from '../dtos/vaga.js'
@@ -50,7 +58,7 @@
 				return vaga.idVaga === this.vagaSelecionada.idVaga
 			},
 			candidatar() {
-				alert(`candidatou-se para vaga -> id: '${this.vagaSelecionada.idVaga}' titulo: '${this.vagaSelecionada.titulo}'`)
+				alert(`Candidatou-se para vaga = id: ${this.vagaSelecionada.idVaga}, titulo: '${this.vagaSelecionada.titulo}'`)
 			}
 		}
 	}
