@@ -3,13 +3,13 @@
 		<div class="base-container">
 
 			<div class="realocar-panel__board">
+				<p class="realocar-panel__board__titulo">VAGAS ABERTAS</p>
 				<ul class="realocar-panel__board__ul">
-					<li class="realocar-panel__board__titulo">VAGAS ABERTAS</li>
-					<li v-for="vaga in vagas" class="realocar-panel__box" @click.stop="selecionarVaga(vaga)" :class="{'selecionada': isSelecionada(vaga)}">
-						<div class="realocar-panel__box__titulo"><div>{{vaga.titulo}}</div></div>
-						<div class="realocar-panel__box__desc"><div>{{vaga.descricaoCurta}}</div></div>
+					<li v-for="vaga in vagas" class="realocar-panel__board__box" @click.stop="selecionarVaga(vaga)" :class="{'selecionada': isSelecionada(vaga)}">
+						<div class="realocar-panel__board__box__titulo"><div>{{vaga.titulo}}</div></div>
+						<div class="realocar-panel__board__box__desc"><div>{{vaga.localTrabalho}}</div></div>
 					</li>
-					<li class="realocar-panel__box__bottom"></li>
+					<li class="realocar-panel__board__box__bottom"></li>
 				</ul>
 			</div>
 
@@ -19,9 +19,9 @@
 					<div class="realocar-panel__desc__vaga">
 						<div>
 							<div class="realocar-panel__desc__vaga__titulo">{{vagaSelecionada.titulo}}</div>
-							<div class="realocar-panel__desc__vaga__sub-titulo">{{vagaSelecionada.descricaoCurta}}</div>
+							<div class="realocar-panel__desc__vaga__sub-titulo">{{vagaSelecionada.localTrabalho}}</div>
 						</div>
-						<div class="realocar-panel__desc__vaga__desc">{{vagaSelecionada.descricaoCompleta}}</div>
+						<div class="realocar-panel__desc__vaga__desc" v-html="vagaSelecionada.descricao"></div>
 						<div class="realocar-panel__desc__candidatar">
 							<div @click.stop="candidatar()">
 								<span>Candidatar-se</span>
