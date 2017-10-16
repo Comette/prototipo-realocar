@@ -9,8 +9,8 @@
 						<div class="realocar-panel__board__box__titulo"><div>{{vaga.titulo}}</div></div>
 						<div class="realocar-panel__board__box__desc"><div>{{vaga.localTrabalho}}</div></div>
 					</li>
-					<li class="realocar-panel__board__box__bottom"></li>
 				</ul>
+				<div class="realocar-panel__board__box__bottom"></div>
 			</div>
 
 			<div class="realocar-panel__desc">

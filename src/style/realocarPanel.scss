@@ -1,7 +1,8 @@
+@import "./base.scss";
 
 .realocar-panel{
 	min-height: 350px;
-	background-color: #32363F;
+	background-color: $realocar-dark-gray;
 	padding: 0 25px;
 
 	&__board{
@@ -25,15 +26,15 @@
 			padding-left: 15px;
 			margin: 0;
 			margin-left: 10px;
-			color: #FBB041;
-			border-left: 2px solid #FBB041;
+			color: $realocar-orange;
+			border-left: 2px solid $realocar-orange;
 		}
 		
 		&__box{
 			$this: &;
 			font-size: 14px;
-			color: #D6DCE0;
-			border-left: 2px solid #FBB041;
+			color: $realocar-light-gray;
+			border-left: 2px solid $realocar-orange;
 			
 			&__titulo{
 				font-weight: 600;
@@ -41,10 +42,10 @@
 				padding-right: 15px;
 				
 				div{
-					background-color: #434756;
+					background-color: $realocar-gray;
 					padding: 10px;
 					padding-bottom: 3px;
-					border-right: 2px solid #D6DCE0;
+					border-right: 2px solid $realocar-light-gray;
 					border-top-left-radius: 5px;
 					border-top-right-radius: 5px;
 					cursor: pointer;
@@ -60,10 +61,10 @@
 				
 				div{
 					cursor: pointer;
-					background-color: #434756;
+					background-color: $realocar-gray;
 					padding: 10px;
 					padding-top: 3px;
-					border-right: 2px solid #D6DCE0;
+					border-right: 2px solid $realocar-light-gray;
 					border-bottom-left-radius: 5px;
 					border-bottom-right-radius: 5px;
 				}
@@ -73,8 +74,8 @@
 					width: 12px;
 					height: 12px;
 					border-radius: 15px;
-					background-color: #32363F;
-					border: 1px solid #FBB041;
+					background-color: $realocar-dark-gray;
+					border: 1px solid $realocar-orange;
 					position: absolute;
 					top: -7px;
 					left: -8px;
@@ -83,25 +84,26 @@
 			}
 	
 			&__bottom{
-				border-left: 2px solid #FBB041;
+				border-left: 2px solid $realocar-orange;
 				height: 50px;
+				margin-left: 10px;
 			}
 	
 			&:hover{
 				#{$this}{
 					&__titulo{
-						color: #FBB041;
+						color: $realocar-orange;
 						transition: all .1s;
 	
 						div{
-							border-color: #FBB041;
+							border-color: $realocar-orange;
 							border-width: 3px;
 						}
 					}
 	
 					&__desc{
 						div{
-							border-color: #FBB041;
+							border-color: $realocar-orange;
 							border-width: 3px;
 						}
 					}
@@ -112,22 +114,22 @@
 			&.selecionada{
 				#{$this}{
 					&__titulo{
-						color: #FBB041;
+						color: $realocar-orange;
 						div{
-							border-color: #FBB041;
+							border-color: $realocar-orange;
 						}
 					}
 	
 					&__desc{
 						div{
-							border-color: #FBB041;
+							border-color: $realocar-orange;
 						}
 						&:before{
 							width: 18px;
 							height: 18px;
 							left: -11px;
 							top: -10px;
-							background-color: #FBB041;
+							background-color: $realocar-orange;
 							transition: all .2s;
 						}
 					}
@@ -147,7 +149,7 @@
 		&__titulo{
 			padding-top: 50px;
 			padding-bottom: 30px;
-			color: #FBB041;
+			color: $realocar-orange;
 			font-size: 20px;
 			font-weight: 600;
 			text-align: right;
@@ -156,12 +158,12 @@
 		}
 
 		&__vaga{
-			background-color: #434756;
+			background-color: $realocar-gray;
 			padding: 20px 20px;
-			color: #D6DCE0;
+			color: $realocar-light-gray;
 			font-size: 14px;
 			border-radius: 5px;
-			border: 2px solid #D6DCE0; 
+			border: 2px solid $realocar-light-gray;
 			border-top: none;
 			border-bottom: none;
 			font-size: 14px;
@@ -173,7 +175,7 @@
 				font-weight: 600;
 				padding-bottom: 15px;
 				width: 49%;
-				color: #FBB041;
+				color: $realocar-orange;
 				font-size: 16px;
 			}
 			
@@ -186,7 +188,7 @@
 			}
 			
 			&__desc{
-				max-height: 400px;
+				max-height: 450px;
 				overflow-y: auto;
 			}
 		}
@@ -198,20 +200,20 @@
 			div{
 				cursor: pointer;
 				vertical-align: bottom;
-				color: #D6DCE0;
-				background-color: #32363F;
+				color: $realocar-light-gray;
+				background-color: $realocar-dark-gray;
 				margin: 25px 25% 10px 25%;
 				width: 50%;
 				border-radius: 5px;
 				padding: 10px 0px;
 				font-weight: 600;
 				font-size: 18px;
-				border: 2px solid #FBB041; 
+				border: 2px solid $realocar-orange; 
 				border-top: none;
 				border-bottom: none;
 
 				&:hover{
-					color: #FBB041;
+					color: $realocar-orange;
 					border-width: 3px;
 					width: calc(50% - 2px);
 					transition: all .2s;
@@ -228,10 +230,10 @@
 
 		&__vazio{
 			content: '';
-			background-color: #434756;
+			background-color: $realocar-gray;
 			padding: 100px 10px;
 			border-radius: 5px;
-			border: 2px solid #D6DCE0;
+			border: 2px solid $realocar-light-gray;
 			border-top: none;
 			border-bottom: none;
 			text-align: center;

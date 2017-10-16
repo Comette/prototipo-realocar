@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<realocar-header></realocar-header>
-		<realocar-panel></realocar-panel>
 		<realocar-home></realocar-home>
+		<realocar-panel></realocar-panel>
 	</div>
 </template>
 

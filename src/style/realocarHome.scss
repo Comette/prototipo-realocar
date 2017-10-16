@@ -1,8 +1,10 @@
+@import "./base.scss";
+
 .realocar-home{
 	padding: 0 25px;
 	min-height: 300px;
-	color: #D6DCE0;
-	background-color: #434756;
+	color: $realocar-light-gray;
+	background-color: $realocar-gray;
 
 	&__title{
 		padding: 20px;
@@ -32,7 +34,7 @@
 
 		&__content{
 			display: flex;
-			border-top: 2px solid #2d3039;
+			border-top: 2px solid $realocar-darkest-gray;
 			position: relative;
 			height: 1px;
 			min-width: 250px;
@@ -41,32 +43,32 @@
 				content: '';
 				width: 20px;
 				height: 20px;
-				background-color: #434756;
+				background-color: $realocar-gray;
 				border-radius: 20px;
-				border: 1px solid #2d3039;
+				border: 1px solid $realocar-darkest-gray;
 				position: absolute;
 				top: -12px;
 				left: 47%;
 			}
 
 			&--active{
-				border-top: 2px solid #FBB041;
+				border-top: 2px solid $realocar-orange;
 				transition: all 200ms ease-in-out;
 
 				&:before{
 					transition: all 200ms ease-in;
-					background-color: #FBB041;
-					border: 1px solid #FBB041;
+					background-color: $realocar-orange;
+					border: 1px solid $realocar-orange;
 				}
 			}
 
 			&--done{
-				border-top: 2px solid #FBB041;
+				border-top: 2px solid $realocar-orange;
 				transition: all 200ms ease-in-out;
 
 				&:before{
 					transition: all 200ms ease-in;
-					border: 1px solid #FBB041;
+					border: 1px solid $realocar-orange;
 				}
 			}
 		}
@@ -75,11 +77,11 @@
 	&__description{
 		margin: 40px 100px 50px 100px;
 		padding: 25px;
-		border: 2px solid #FBB041;
-		background-color: #32363F;
+		border: 2px solid $realocar-orange;
+		background-color: $realocar-dark-gray;
 		border-top: none;
 		border-bottom: none;
 		border-radius: 10px;
-		font-size: 18px;
+		font-size: 16px;
 	}
 }

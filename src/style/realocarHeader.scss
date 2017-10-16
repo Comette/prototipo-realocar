@@ -1,14 +1,17 @@
+@import "./base.scss";
+
 .realocar-header{
 	height: 150px;
-	background-color: #434756;
+	background-color: $realocar-dark-gray;
+	// background-color: $realocar-gray;
 
 	&__logo{
 		height: 100px;
-		padding: 25px 50px;
+		padding: 25px 45px;
 	}
 
 	&__title{
-		color: #D6DCE0;
+		color: $realocar-light-gray;
 		display: inline-block;
 		vertical-align: top;
 		width: 38%;
@@ -21,7 +24,7 @@
 		}
 
 		span{
-			color: #FBB041;
+			color: $realocar-orange;
 		}
 	}
 
@@ -34,7 +37,8 @@
 		p{
 			padding-top: 25px;
 			text-align: center;
-			color: #8d92a5;
+			color: #5a6172;
+			// color: #8d94a5;
 			font-style: italic;
 		}
 	}
