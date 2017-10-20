@@ -2,7 +2,7 @@
 	<div class="realocar-home">
 		<div class="base-container">
 			<div class="realocar-home__title">
-				<p>Conheça o processo seletivo:</p>
+				<p>Como funciona:</p>
 				<div class="realocar-home__flow">
 					<ul class="realocar-home__flow--ul">
 						<li class="realocar-home__flow--li" v-for="etapa in etapas" @click="selecionarEtapa(etapa)">

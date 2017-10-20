@@ -3,13 +3,15 @@
 .realocar-home{
 	padding: 0 25px;
 	min-height: 300px;
-	color: $realocar-light-gray;
-	background-color: $realocar-gray;
+	color: $realocar-black;
+	background-color: white;
+	box-shadow: inset 0px 2px 10px -5px $realocar-black;
 
 	&__title{
 		padding: 20px;
-		font-size: 28px;
+		font-size: 26px;
 		text-align: center;
+		font-weight: 600;
 	}
 
 	&__flow{
@@ -30,11 +32,12 @@
 		&__title{
 			padding-bottom: 20px;
 			font-size: 24px;
+			font-weight: 500;
 		}
 
 		&__content{
 			display: flex;
-			border-top: 2px solid $realocar-darkest-gray;
+			border-top: 2px solid $realocar-dark-gray;
 			position: relative;
 			height: 1px;
 			min-width: 250px;
@@ -43,9 +46,9 @@
 				content: '';
 				width: 20px;
 				height: 20px;
-				background-color: $realocar-gray;
+				background-color: white;
 				border-radius: 20px;
-				border: 1px solid $realocar-darkest-gray;
+				border: 1px solid $realocar-dark-gray;
 				position: absolute;
 				top: -12px;
 				left: 47%;
@@ -76,12 +79,13 @@
 
 	&__description{
 		margin: 40px 100px 50px 100px;
-		padding: 25px;
-		border: 2px solid $realocar-orange;
-		background-color: $realocar-dark-gray;
+		padding: 20px;
+		background-color: $realocar-orange;
+		box-shadow: 0px 0px 12px -4px $realocar-black;
 		border-top: none;
 		border-bottom: none;
-		border-radius: 10px;
-		font-size: 16px;
+		font-size: 17px;
+		font-weight: 500;
+		color: white;
 	}
 }
