@@ -5,6 +5,15 @@ var serveStatic = require('serve-static');
 app = express();
 app.use(serveStatic(__dirname));
 
+/*
+req = requisição
+res = resposta
+next = not important
+*/
+app.get('/api/teste', (req, res, next) => {
+  res.status(200).json({name: 'batata'})
+})
+
 var port = process.env.PORT || 5000;
 app.listen(port);
 
