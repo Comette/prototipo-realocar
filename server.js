@@ -3,7 +3,7 @@ var path = require('path');
 var serveStatic = require('serve-static');
 
 app = express();
-app.use(serveStatic(__dirname));
+app.use(serveStatic('./public'));
 
 /*
 req = requisição
