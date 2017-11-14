@@ -1,19 +1,25 @@
 <template>
 	<div>
 		<realocar-header></realocar-header>
-		<realocar-home></realocar-home>
-		<realocar-panel></realocar-panel>
+		<div v-if="false">
+			<realocar-login></realocar-login>
+		</div>
+		<div v-else>
+			<realocar-home></realocar-home>
+			<realocar-panel></realocar-panel>
+		</div>
 	</div>
 </template>
 
 <script>
 import realocarHeader from './component/realocarHeader.vue'
+import realocarLogin from './component/realocarLogin.vue'
 import realocarHome from './component/realocarHome.vue'
 import realocarPanel from './component/realocarPanel.vue'
 
 export default {
 	name: 'app',
-	components: { realocarHeader, realocarHome, realocarPanel }
+	components: { realocarHeader, realocarLogin, realocarHome, realocarPanel }
 }
 </script>
 

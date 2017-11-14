@@ -1,7 +1,7 @@
 <template>
 	<div class="realocar-header">
 		<div class="base-container">
-			<img class="realocar-header__logo" src="../assets/LOGO-CWI-PADRÃO-VERTICAL-ESCURO.svg" alt="">
+			<img class="realocar-header__logo" src="../assets/LOGO-CWI-PADRAO-VERTICAL-ESCURO.svg" alt="">
 			<div class="realocar-header__title">
 				<p><span>CWI </span>Realocar</p>
 			</div>

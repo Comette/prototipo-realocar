@@ -1,0 +1,43 @@
+@import "./base.scss";
+
+.realocar-login{
+  &__form{
+    margin: 150px 200px;
+
+    &__label{
+    }
+
+    &__input{
+      input{
+        width: 100%;
+      }
+    }
+
+    &__submit{
+      margin: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .realocar-login{
+    &__form{
+      margin: 150px 300px;
+    }
+  }
+}
+@media (min-width: 1360px){
+  .realocar-login{
+    &__form{
+      margin: 150px 350px;
+    }
+  }
+}
+@media (min-width: 1680px){
+  .realocar-login{
+    &__form{
+      margin: 150px 370px;
+    }
+  }
+}

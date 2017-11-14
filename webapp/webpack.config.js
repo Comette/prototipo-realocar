@@ -4,8 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './public/dist'),
-    publicPath: '/public/dist/',
+    path: __dirname + '/public/dist',
+    publicPath: '/dist/',
     filename: 'build.js'
   },
   module: {
@@ -45,7 +45,9 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: true
+    noInfo: true,
+    contentBase: __dirname + '/public/',
+    inline: true
   },
   performance: {
     hints: false
@@ -70,6 +72,14 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
+    })
+  ])
+} else if (process.env.NODE_ENV === 'development') {
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"'
+      }
     })
   ])
 }
